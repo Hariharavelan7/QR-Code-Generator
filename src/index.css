@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.app-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pic {
+  width: 150px;
+  height: 150px;
+  padding: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  position: relative;
+}
+
+.container input {
+  font-size: 1em;
+  transition: 0.5s;
+  width: 100%;
+}
+
+#dataInput {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+#sizeInput {
+  margin-top: 2em;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.input-label {
+  position: absolute;
+  top: 1.3em;
+  left: 1em;
+}
+
+.input-label1 {
+  position: absolute;
+  top: 6.3em;
+  left: 1em;
+}
+
+.container label {
+  transition: 0.7s;
+}
+
+.container #dataInput:valid ~ .input-label,
+.container #dataInput:focus ~ .input-label {
+  color: #219a52;
+  transform: translateX(5px) translateY(-25px);
+  font-size: 1em;
+  padding: 0 10px;
+  background-color: #555;
+  letter-spacing: 0.2em;
+  border-radius: 5px;
+}
+
+.container #sizeInput:valid ~ .input-label1,
+.container #sizeInput:focus ~ .input-label1 {
+  color: #219a52;
+  transform: translateX(5px) translateY(-1.6em);
+  font-size: 1em;
+  padding: 0 10px;
+  background-color: #555;
+  letter-spacing: 0.2em;
+  border-radius: 5px;
+  outline: none;
+}
+
+#dataInput,#sizeInput:focus {
+  border: 1px solid #555;
+  outline: none;
+}
+
+button {
+  padding: 15px 20px;
+  font-size: 18px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  margin: 1.5em 10px;
+  display: flex;
+}
+
+.generate-button {
+  position: absolute;
+  background-color: #555;
+  left: 1em;
+  transition: 0.5s;
+  background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+  border-radius: 100px;
+}
+
+.generate-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.generate-button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px 10px hsla(0, 67%, 57%, 0.195);
+}
+
+.download-button {
+  position: absolute;
+  left: 13em;
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  color: green;
+  margin-left: 10px;
+  transition: 0.5s;
+}
+
+.download-button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px 10px hsla(111, 50%, 47%, 0.195);
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .generate-button {
+    position: absolute;
+    left: 4em;
+  }
+  
+  .download-button {
+    position: absolute;
+    left: 4em;
+    top: 11.5em;
+  }
+}
